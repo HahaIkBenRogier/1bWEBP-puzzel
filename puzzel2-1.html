@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puzzel 2-1</title>
+	<script type="text/javascript">
+
+		function vergelijkWoorden(){
+			var w1 = prompt("Woord 1?");
+			var w2 = prompt("Woord 2?");
+
+			var w1length = w1.length;
+			var w2lenght = w2.length;
+
+			if (w1length < w2lenght) {
+			     alert(w2 + " is langer dan " + w1);
+			}
+			if (w1length > w2lenght) {
+				alert(w1 + " is langer dan " + w2);
+			}
+			if (w1length === w2lenght) {
+				alert(w1 + " en " + w2 + " zijn even lang");
+			}
+		}
+
+	</script>
+</head>
+<body>
+<button onclick="vergelijkWoorden()">Vergelijk woorden</button>
+</body>
+</html>

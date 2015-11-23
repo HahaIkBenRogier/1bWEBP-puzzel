@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puzzel 2-4</title>
+	<script type="text/javascript">
+
+		function vergelijkWoorden(){
+			var w1 = document.getElementById('w1').value;
+			var w2 = document.getElementById('w2').value;
+
+			var w1length = w1.length;
+			var w2lenght = w2.length;
+
+			if (w1length < w2lenght) {
+			     document.getElementById('uitkomst').innerHTML = w2 + " is langer dan " + w1;
+			}
+			if (w1length > w2lenght) {
+				document.getElementById('uitkomst').innerHTML = w1 + " is langer dan " + w2;
+			}
+			if (w1length === w2lenght) {
+				document.getElementById('uitkomst').innerHTML = w1 + " en " + w2 + " zijn even lang";
+			}
+		}
+
+	</script>
+</head>
+<body>
+    <input type="text" id="w1" placeholder="Woord1"></input>
+    <input type="text" id="w2" placeholder="Woord2"></input>
+    <button onclick="vergelijkWoorden()">Vergelijk woorden</button>
+    <p id="uitkomst"></p>
+</body>
+</html>

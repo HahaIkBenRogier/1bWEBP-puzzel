@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puzzel 2-5</title>
+	<script type="text/javascript">
+
+		function valutaBerekenen(){
+			var euro = document.getElementById('euro').value;
+			var dollar = euro * 1.08;
+            var peso = euro * 18.06;
+            var yen = euro * 132.04;
+            var pond = euro * 0.71;
+            
+            document.getElementById("dollar").innerHTML = dollar + " Amerikaanse Dollar";
+            document.getElementById("peso").innerHTML = peso + " Mexicaanse Peso";
+            document.getElementById("yen").innerHTML = yen + " Japanse Yen";
+            document.getElementById("pond").innerHTML = pond + " Britse Pond";
+        }
+	</script>
+</head>
+<body>
+    <input type="text" id="euro" placeholder="Euro"></input>
+    <button onclick="valutaBerekenen()">Omrekenen</button>
+    <p id="dollar"></p>
+    <p id="peso"></p>
+    <p id="yen"></p>
+    <p id="pond"></p>
+</body>
+</html>

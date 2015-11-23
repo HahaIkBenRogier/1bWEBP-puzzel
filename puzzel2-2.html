@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puzzel 2-2</title>
+	<script type="text/javascript">
+
+		function berekenBMI(){
+
+			// INVOER
+			var length_cm = parseInt(prompt("Lengte in cm"));
+			var weight_kg = parseInt(prompt("Gewicht in kg"));
+
+			// MAGIE
+			var length_m = length_cm / 100;
+			var Qi = weight_kg / (length_m * length_m);
+			var BMI = Qi.toFixed(2);
+
+			function BMImelding(Queteletindex) {
+				if (Queteletindex < 18.5)	{ return "ondergewicht" }
+				if (Queteletindex < 25)		{ return "normaal gewicht" }
+				if (Queteletindex < 27)		{ return "licht overgewicht" }
+				if (Queteletindex < 30)		{ return "matig overgewicht" }
+				if (Queteletindex < 40)		{ return "ernstig overgewicht" }
+				if (Queteletindex > 41) 	{ return "ziekelijk overgewicht" }
+			}
+            
+            // UITVOER
+			alert("Je BMI is " + BMI + " en dat betekent dat je " + BMImelding(Qi)+ " hebt");
+		}
+
+	</script>
+</head>
+<body>
+<button onclick="berekenBMI()">Bereken BMI</button>
+</body>
+</html>
