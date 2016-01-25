@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<title>Puzzel 3-2</title>
+	<script>
+		var spaansSpreken = function(){
+			var spaans = ['uno','dos','tres','cuatro','cinco', 'seis', 'siete','ocho', 'nueve', 'diez']; 
+			var invoer = document.getElementById('invoer').value;
+
+			if (invoer > 10 || invoer < 1) {
+				alert("Dat getal weet ik nog niet");
+			} else {
+				uitvoer = spaans[invoer-1];
+				alert("Het Spaanse woord voor het getal " + invoer + " is " + uitvoer);
+			}
+		}
+	</script>
+</head>
+<body>
+<h1>Ik kan Spaans spreken</h1>
+<form>
+	<input type="number" id="invoer" name="invoer">	
+	<input type="button" id="knop" onclick="spaansSpreken()" value="Geef spaans woord">
+</form>
+</body>
+</html>
